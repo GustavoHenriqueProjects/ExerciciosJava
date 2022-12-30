@@ -30,6 +30,7 @@ public class TelaIdade extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabelDiaMesAnoIdade = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -43,7 +44,9 @@ public class TelaIdade extends javax.swing.JFrame {
         jComboBoxMes = new javax.swing.JComboBox<>();
         jComboBoxDia = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
-        jLabelDiaMesAnoIdade = new javax.swing.JLabel();
+        jLabelIdadeCompleta = new javax.swing.JLabel();
+
+        jLabelDiaMesAnoIdade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -53,7 +56,7 @@ public class TelaIdade extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(20, 130, 123, 20);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(165, 249, 153));
         jPanel1.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
@@ -115,10 +118,8 @@ public class TelaIdade extends javax.swing.JFrame {
         jLabel6.setText("Você tem:");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(20, 210, 70, 20);
-
-        jLabelDiaMesAnoIdade.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        getContentPane().add(jLabelDiaMesAnoIdade);
-        jLabelDiaMesAnoIdade.setBounds(90, 210, 400, 20);
+        getContentPane().add(jLabelIdadeCompleta);
+        jLabelIdadeCompleta.setBounds(100, 210, 390, 20);
 
         setSize(new java.awt.Dimension(517, 373));
         setLocationRelativeTo(null);
@@ -164,10 +165,10 @@ public class TelaIdade extends javax.swing.JFrame {
             Integer mes = periodo.getMonths();
             Integer dia = periodo.getDays();
 
-            jLabelDiaMesAnoIdade.setText(nome + " você tem " + ano.toString() + " anos de idade " + mes.toString() + " mêses " + " e " + dia + " dias.");
+            jLabelIdadeCompleta.setText(nome + " você tem " + ano.toString() + " anos de idade " + mes.toString() + " mêses " + " e " + dia + " dias.");
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Atenção, digite uma data válida", "ERRO", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Atenção, digite uma data válida", "ERRO", JOptionPane.WARNING_MESSAGE);
         }
 
     }
@@ -224,6 +225,7 @@ public class TelaIdade extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabelDiaMesAnoIdade;
     private javax.swing.JLabel jLabelIdade;
+    private javax.swing.JLabel jLabelIdadeCompleta;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextFieldNome;
     // End of variables declaration//GEN-END:variables

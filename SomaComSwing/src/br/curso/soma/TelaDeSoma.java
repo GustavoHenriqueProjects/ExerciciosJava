@@ -35,8 +35,6 @@ public class TelaDeSoma extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jTextFieldParcela2 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jLabelResultado = new javax.swing.JLabel();
-        jButtonSoma = new javax.swing.JButton();
         jButtonSubtracao = new javax.swing.JButton();
         jTextFieldMinuento = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -55,7 +53,21 @@ public class TelaDeSoma extends javax.swing.JFrame {
         jTextFieldDivisor = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabelQuociente = new javax.swing.JLabel();
+        jButtonLimparDivisao = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jButtonSoma = new javax.swing.JButton();
+        jTextFieldNumerador = new javax.swing.JTextField();
+        jTextFieldDenominador = new javax.swing.JTextField();
+        jButtonDivRestCalcular = new javax.swing.JButton();
         jButtonLimpar = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabelDivisaoResposta = new javax.swing.JLabel();
+        jLabelRestoResposta = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabelSomaResposta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -73,7 +85,7 @@ public class TelaDeSoma extends javax.swing.JFrame {
         jLabel3.setBounds(10, 10, 80, 64);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 590, 90);
+        jPanel1.setBounds(0, 0, 590, 80);
 
         jTextFieldParcela1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,21 +112,6 @@ public class TelaDeSoma extends javax.swing.JFrame {
         jLabel5.setText("=");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(430, 140, 20, 32);
-
-        jLabelResultado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        getContentPane().add(jLabelResultado);
-        jLabelResultado.setBounds(480, 140, 100, 30);
-
-        jButtonSoma.setBackground(new java.awt.Color(204, 255, 204));
-        jButtonSoma.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
-        jButtonSoma.setText("Soma");
-        jButtonSoma.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSomaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButtonSoma);
-        jButtonSoma.setBounds(20, 140, 110, 30);
 
         jButtonSubtracao.setBackground(new java.awt.Color(204, 255, 204));
         jButtonSubtracao.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
@@ -239,6 +236,54 @@ public class TelaDeSoma extends javax.swing.JFrame {
         getContentPane().add(jLabelQuociente);
         jLabelQuociente.setBounds(480, 320, 100, 30);
 
+        jButtonLimparDivisao.setBackground(new java.awt.Color(255, 102, 153));
+        jButtonLimparDivisao.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jButtonLimparDivisao.setText("Limpar");
+        jButtonLimparDivisao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimparDivisaoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonLimparDivisao);
+        jButtonLimparDivisao.setBounds(20, 750, 100, 40);
+
+        jPanel2.setBackground(new java.awt.Color(102, 255, 204));
+        jPanel2.setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
+        jLabel2.setText("Divisão e Resto");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(200, 10, 170, 32);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 470, 590, 50);
+
+        jButtonSoma.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonSoma.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jButtonSoma.setText("Soma");
+        jButtonSoma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSomaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonSoma);
+        jButtonSoma.setBounds(20, 140, 110, 30);
+        getContentPane().add(jTextFieldNumerador);
+        jTextFieldNumerador.setBounds(210, 550, 100, 30);
+        getContentPane().add(jTextFieldDenominador);
+        jTextFieldDenominador.setBounds(210, 610, 100, 30);
+
+        jButtonDivRestCalcular.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonDivRestCalcular.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jButtonDivRestCalcular.setText("Calcular");
+        jButtonDivRestCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDivRestCalcularActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonDivRestCalcular);
+        jButtonDivRestCalcular.setBounds(20, 670, 100, 40);
+
         jButtonLimpar.setBackground(new java.awt.Color(255, 102, 153));
         jButtonLimpar.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         jButtonLimpar.setText("Limpar");
@@ -250,7 +295,39 @@ public class TelaDeSoma extends javax.swing.JFrame {
         getContentPane().add(jButtonLimpar);
         jButtonLimpar.setBounds(20, 390, 100, 40);
 
-        setSize(new java.awt.Dimension(607, 482));
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel12.setText("Divisão");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(210, 670, 70, 20);
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel13.setText("Resto");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(210, 710, 60, 25);
+
+        jLabelDivisaoResposta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        getContentPane().add(jLabelDivisaoResposta);
+        jLabelDivisaoResposta.setBounds(320, 670, 80, 20);
+
+        jLabelRestoResposta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        getContentPane().add(jLabelRestoResposta);
+        jLabelRestoResposta.setBounds(320, 710, 70, 20);
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel14.setText("Numerador");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(20, 550, 110, 25);
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel15.setText("Denominador");
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(20, 610, 110, 25);
+
+        jLabelSomaResposta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        getContentPane().add(jLabelSomaResposta);
+        jLabelSomaResposta.setBounds(470, 140, 80, 30);
+
+        setSize(new java.awt.Dimension(607, 839));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -258,43 +335,24 @@ public class TelaDeSoma extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldParcela2ActionPerformed
 
-    private void jButtonSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSomaActionPerformed
-                    
-        if(jTextFieldParcela1.getText().isEmpty() || jTextFieldParcela2.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Digite um valor","Atenção",JOptionPane.WARNING_MESSAGE);
-        }else if(jTextFieldParcela1.getText().matches("[A-Za-z-]+") || jTextFieldParcela2.getText().matches("[A-Za-z-]+")){
-            
-            JOptionPane.showMessageDialog(this, "Digite número", "Atenção",JOptionPane.WARNING_MESSAGE);
-            
-        }else{
-            
-            double parcela1 = Double.parseDouble(jTextFieldParcela1.getText());
-            double parcela2 = Double.parseDouble(jTextFieldParcela2.getText());
-            
-            double resultado = parcela1 + parcela2;
-            
-            jLabelResultado.setText(Double.toString(resultado));
-        }
-    }//GEN-LAST:event_jButtonSomaActionPerformed
-
     private void jTextFieldParcela1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldParcela1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldParcela1ActionPerformed
 
     private void jButtonSubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubtracaoActionPerformed
-        if(jTextFieldMinuento.getText().isEmpty() || jTextFieldSubtraento.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Por favor, digite um valor","Atenção",JOptionPane.WARNING_MESSAGE);
-        }else if(jTextFieldMinuento.getText().matches("[A-Za-z-]+") || jTextFieldSubtraento.getText().matches("[A-Za-z-]+")){
-            
-            JOptionPane.showMessageDialog(this, "Digite número não letra","Atenção",JOptionPane.WARNING_MESSAGE);
-            
-        }else{
-             double valorSub1 = Double.parseDouble(jTextFieldMinuento.getText());
-             double valorSub2 = Double.parseDouble(jTextFieldSubtraento.getText());
-             
-             double resultadoSub = valorSub1 - valorSub2;
-             
-             jLabelResultado2.setText(Double.toString(resultadoSub));
+        if (jTextFieldMinuento.getText().isEmpty() || jTextFieldSubtraento.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, digite um valor", "Atenção", JOptionPane.WARNING_MESSAGE);
+        } else if (jTextFieldMinuento.getText().matches("[A-Za-z-]+") || jTextFieldSubtraento.getText().matches("[A-Za-z-]+")) {
+
+            JOptionPane.showMessageDialog(this, "Digite número não letra", "Atenção", JOptionPane.WARNING_MESSAGE);
+
+        } else {
+            double valorSub1 = Double.parseDouble(jTextFieldMinuento.getText());
+            double valorSub2 = Double.parseDouble(jTextFieldSubtraento.getText());
+
+            double resultadoSub = valorSub1 - valorSub2;
+
+            jLabelResultado2.setText(Double.toString(resultadoSub));
         }
     }//GEN-LAST:event_jButtonSubtracaoActionPerformed
 
@@ -307,19 +365,19 @@ public class TelaDeSoma extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldSubtraentoActionPerformed
 
     private void jButtonMultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMultiplicacaoActionPerformed
-        if(jTextFieldFator1.getText().isEmpty() || jTextFieldFator2.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Por favor, digite um número","Atenção",JOptionPane.WARNING_MESSAGE);
-        }else if(jTextFieldFator1.getText().matches("[A-Za-z-]+") || jTextFieldFator2.getText().matches("[A-Za-z-]+")){
-            JOptionPane.showMessageDialog(this, "Digite número não letra","Atenção",JOptionPane.WARNING_MESSAGE);
-        }else{
-            
+        if (jTextFieldFator1.getText().isEmpty() || jTextFieldFator2.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, digite um número", "Atenção", JOptionPane.WARNING_MESSAGE);
+        } else if (jTextFieldFator1.getText().matches("[A-Za-z-]+") || jTextFieldFator2.getText().matches("[A-Za-z-]+")) {
+            JOptionPane.showMessageDialog(this, "Digite número não letra", "Atenção", JOptionPane.WARNING_MESSAGE);
+        } else {
+
             int valorMult = Integer.parseInt(jTextFieldFator1.getText());
             int valorMult2 = Integer.parseInt(jTextFieldFator2.getText());
-            
-            int produto = valorMult*valorMult2;
-            
+
+            int produto = valorMult * valorMult2;
+
             jLabelProduto.setText(Integer.toString(produto));
-            
+
         }
     }//GEN-LAST:event_jButtonMultiplicacaoActionPerformed
 
@@ -332,21 +390,19 @@ public class TelaDeSoma extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldFator2ActionPerformed
 
     private void jButtonDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDivisaoActionPerformed
-        if(jTextFieldDividendo.getText().isEmpty() || jTextFieldDivisor.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Por favor, digite um número","Atenção",JOptionPane.WARNING_MESSAGE);
-        }else if(jTextFieldDividendo.getText().matches("[A-Za-z-]+") || jTextFieldDivisor.getText().matches("[A-Za-z-]+")){
+        if (jTextFieldDividendo.getText().isEmpty() || jTextFieldDivisor.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, digite um número", "Atenção", JOptionPane.WARNING_MESSAGE);
+        } else if (jTextFieldDividendo.getText().matches("[A-Za-z-]+") || jTextFieldDivisor.getText().matches("[A-Za-z-]+")) {
             JOptionPane.showMessageDialog(this, "Digite um número não letra");
-        }else{
-            
+        } else {
+
             double valorDividendo = Double.parseDouble(jTextFieldDividendo.getText());
             double valorDivisor = Double.parseDouble(jTextFieldDivisor.getText());
-            
-            double valorQuociente = valorDividendo/valorDivisor;
-            
+
+            double valorQuociente = valorDividendo / valorDivisor;
+
             jLabelQuociente.setText(Double.toString(valorQuociente));
-          
-            
-            
+
         }
     }//GEN-LAST:event_jButtonDivisaoActionPerformed
 
@@ -358,8 +414,51 @@ public class TelaDeSoma extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldDivisorActionPerformed
 
+    private void jButtonLimparDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimparDivisaoActionPerformed
+    if(evt.getSource() == jButtonLimparDivisao){
+        jTextFieldNumerador.setText(null);
+        jTextFieldDenominador.setText(null);
+        
+        jLabelDivisaoResposta.setText(null);
+        jLabelRestoResposta.setText(null);
+    }
+    }//GEN-LAST:event_jButtonLimparDivisaoActionPerformed
+
+    private void jButtonSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSomaActionPerformed
+        if (jTextFieldParcela1.getText().isEmpty() || jTextFieldParcela2.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor digite um número", "Atenção", JOptionPane.WARNING_MESSAGE);
+        } else if (jTextFieldParcela1.getText().matches("[A-Za-z-]+") || jTextFieldParcela2.getText().matches("[A-Za-z-]+")) {
+            JOptionPane.showMessageDialog(this, "Digite um número não letra", "Atenção", JOptionPane.WARNING_MESSAGE);
+        } else {
+            double parcela1 = Double.parseDouble(jTextFieldParcela1.getText());
+            double parcela2 = Double.parseDouble(jTextFieldParcela2.getText());
+
+            double respostaSoma = parcela1 + parcela2;
+
+            jLabelSomaResposta.setText(Double.toString(respostaSoma));
+        }
+    }//GEN-LAST:event_jButtonSomaActionPerformed
+
+    private void jButtonDivRestCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDivRestCalcularActionPerformed
+       if(jTextFieldNumerador.getText().isEmpty()|| jTextFieldDenominador.getText().isEmpty()){
+           JOptionPane.showMessageDialog(this, "Preencha todos os campos","Atenção",JOptionPane.WARNING_MESSAGE);
+       }else if(jTextFieldNumerador.getText().matches("[A-Za-z-]+") || jTextFieldDenominador.getText().matches("[A-Za-z-]+")){
+           JOptionPane.showMessageDialog(this,"Digite número não letra","Atenção",JOptionPane.WARNING_MESSAGE);
+       }else{
+           
+        double numerador = Double.parseDouble(jTextFieldNumerador.getText());
+        double denominador = Double.parseDouble(jTextFieldDenominador.getText());
+
+        double respostaDivisao = numerador / denominador;
+        double respostaResto = numerador % denominador;
+
+        jLabelDivisaoResposta.setText(Double.toString(respostaDivisao));
+        jLabelRestoResposta.setText(Double.toString(respostaResto));
+       }
+    }//GEN-LAST:event_jButtonDivRestCalcularActionPerformed
+
     private void jButtonLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimparActionPerformed
-        if(evt.getSource()==jButtonLimpar){
+        if (evt.getSource() == jButtonLimpar) {
             jTextFieldParcela1.setText(null);
             jTextFieldParcela2.setText(null);
             jTextFieldMinuento.setText(null);
@@ -369,6 +468,10 @@ public class TelaDeSoma extends javax.swing.JFrame {
             jTextFieldFator1.setText(null);
             jTextFieldFator2.setText(null);
             
+            jLabelSomaResposta.setText(null);
+            jLabelResultado2.setText(null);
+            jLabelProduto.setText(null);
+            jLabelQuociente.setText(null);
         }
     }//GEN-LAST:event_jButtonLimparActionPerformed
 
@@ -408,14 +511,21 @@ public class TelaDeSoma extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonDivRestCalcular;
     private javax.swing.JButton jButtonDivisao;
     private javax.swing.JButton jButtonLimpar;
+    private javax.swing.JButton jButtonLimparDivisao;
     private javax.swing.JButton jButtonMultiplicacao;
     private javax.swing.JButton jButtonSoma;
     private javax.swing.JButton jButtonSubtracao;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -423,16 +533,21 @@ public class TelaDeSoma extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelDivisaoResposta;
     private javax.swing.JLabel jLabelProduto;
     private javax.swing.JLabel jLabelQuociente;
-    private javax.swing.JLabel jLabelResultado;
+    private javax.swing.JLabel jLabelRestoResposta;
     private javax.swing.JLabel jLabelResultado2;
+    private javax.swing.JLabel jLabelSomaResposta;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextFieldDenominador;
     private javax.swing.JTextField jTextFieldDividendo;
     private javax.swing.JTextField jTextFieldDivisor;
     private javax.swing.JTextField jTextFieldFator1;
     private javax.swing.JTextField jTextFieldFator2;
     private javax.swing.JTextField jTextFieldMinuento;
+    private javax.swing.JTextField jTextFieldNumerador;
     private javax.swing.JTextField jTextFieldParcela1;
     private javax.swing.JTextField jTextFieldParcela2;
     private javax.swing.JTextField jTextFieldSubtraento;
